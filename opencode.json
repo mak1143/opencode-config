@@ -1,0 +1,118 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "models": {
+        "deepseek-coder:6.7b-instruct-q4_K_M": {
+          "limit": {
+            "context": 163840,
+            "output": 65536
+          },
+          "name": "deepseek-coder:6.7b-instruct-q4_K_M"
+        },
+        "deepseek-v3.2:cloud": {
+          "limit": {
+            "context": 163840,
+            "output": 65536
+          },
+          "name": "deepseek-v3.2:cloud"
+        },
+        "glm-5:cloud": {
+          "name": "glm-5:cloud"
+        },
+        "kimi-k2.5:cloud": {
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          },
+          "name": "kimi-k2.5:cloud"
+        },
+        "minimax-m2.5:cloud": {
+          "limit": {
+            "context": 204800,
+            "output": 128000
+          },
+          "name": "minimax-m2.5:cloud"
+        }
+      },
+      "name": "Ollama (local)",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      }
+    },
+    "openrouter": {
+      "models": {
+        "moonshotai/kimi-k2.5": {
+          "name": "moonshotai/kimi-k2.5"
+        },
+        "google/gemma-4-31b-it:free": {
+          "name": "google/gemma-4-31b-it:free"
+        },
+        "google/gemma-4-26b-a4b-it:free": {
+          "name": "google/gemma-4-26b-a4b-it:free"
+        }
+      },
+      "name": "OpenRouter",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://openrouter.ai/api/v1",
+        "apiKey": "{env:OPENROUTER_API_KEY}"
+      }
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      }
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser",
+        "chromium"
+      ],
+      "enabled": true
+    },
+    "puppeteer": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "enabled": true
+    },
+    "filesystem": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem@latest",
+        "/home/shoyo"
+      ],
+      "enabled": true
+    },
+    "git": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--with",
+        "mcp<2.0.0",
+        "mcp-server-git"
+      ],
+      "enabled": true
+    }
+  },
+  "instructions": [
+    "rules/*.md"
+  ],
+  "shell": "/usr/bin/zsh"
+}
