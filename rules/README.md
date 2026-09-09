@@ -33,6 +33,7 @@ Your rule content here. Be specific and actionable.
 | `job-search.md` | Professional content: resume, LinkedIn, interviews, portfolio |
 | `documentation.md` | Write docs like you maintain them, include tool history |
 | `ideas.md` | Brainstorm, capture, decide with structured tradeoffs |
+| `full-stack.md` | Load the frontend/backend learning references on demand |
 | `context7.md` | Use Context7 MCP for current library/framework docs |
 
 ## Rules
