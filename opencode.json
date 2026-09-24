@@ -60,6 +60,14 @@
         "X-Goog-Api-Key": "{file:/home/shoyo/.config/opencode/.stitch-api-key}"
       },
       "oauth": false
+    },
+    "design-inspiration": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@lobehub/mcp-design-inspiration"
+      ]
     }
   },
   "model": "openrouter/thinkingmachines/inkling-small:free",

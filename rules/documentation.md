@@ -62,6 +62,21 @@ Every project should have a README.md. Structure:
 - Update README when behavior changes — stale READMEs are worse than none
 - No walls of text — use headers, lists, code blocks
 
+### House README style — follow this for project READMEs
+
+This is the user's approved style (reference: the Learning Journal project). Apply it
+unless told otherwise.
+
+- **GFM only** — GitHub-flavored Markdown; must render on GitHub. No Obsidian/custom wikilinks.
+- **Open with a one-liner** — what the project is, then a Features list.
+- **Mermaid `erDiagram`** — include one when it clarifies data relationships.
+- **Three shield badges** — under the intro, matching the stack (e.g. Python, Django, uv).
+- **Tables for structured content** — a Tech stack table and a Useful commands table.
+- **`> **Note:**` admonitions** for caveats (dev-only defaults, secrets, etc.).
+- **No emojis.**
+- **No LICENSE/CONTRIBUTING/CHANGELOG scaffolding** unless the user asks for it.
+- **Draft, then get explicit approval before writing the file.**
+
 ## Inline documentation
 
 - Document **why**, never **what** — the code shows what
