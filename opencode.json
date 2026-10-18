@@ -63,10 +63,10 @@
     },
     "design-inspiration": {
       "type": "local",
+      "enabled": true,
       "command": [
-        "npx",
-        "-y",
-        "@lobehub/mcp-design-inspiration"
+        "node",
+        "/home/shoyo/.local/share/opencode/mcp/design-inspiration-mcp/src/index.js"
       ]
     }
   },
